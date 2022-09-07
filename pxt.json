@@ -1,5 +1,5 @@
 {
-    "name": "SERVO 2",
+    "name": "DRIVE MOTORS",
     "description": "",
     "dependencies": {
         "core": "*",
