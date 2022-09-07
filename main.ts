@@ -1,15 +1,11 @@
-basic.showIcon(IconNames.Happy)
-let Servo = 0
-SuperBit.Servo(SuperBit.enServo.S1, Servo)
-basic.forever(function () {
-    if (input.buttonIsPressed(Button.A)) {
-        Servo += 1
-        SuperBit.Servo(SuperBit.enServo.S1, Servo)
-    } else if (input.buttonIsPressed(Button.B)) {
-        Servo += -1
-        SuperBit.Servo(SuperBit.enServo.S1, Servo)
-    } else if (input.buttonIsPressed(Button.AB)) {
-        Servo = 0
-        SuperBit.Servo(SuperBit.enServo.S1, Servo)
-    }
+input.onButtonPressed(Button.A, function () {
+    SuperBit.Servo(SuperBit.enServo.S1, 90)
 })
+input.onButtonPressed(Button.AB, function () {
+    SuperBit.Servo(SuperBit.enServo.S1, 0)
+})
+input.onButtonPressed(Button.B, function () {
+    SuperBit.Servo(SuperBit.enServo.S1, 45)
+})
+basic.showIcon(IconNames.Happy)
+SuperBit.Servo(SuperBit.enServo.S1, 0)
